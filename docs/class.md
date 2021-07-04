@@ -54,7 +54,7 @@ Point === Point.prototype.constructor // true
 ```
 
 **//Point === Point.prototype.constructor // true**
-**//Class的constructor和其他方法一样，也在prototype **
+**//CLASS可以看成是函数对象，constructor和其他方法一样，也是挂载在prototype上**
 
 上面代码表明，类的数据类型就是函数，类本身就指向构造函数。
 
@@ -110,7 +110,7 @@ b.constructor === B.prototype.constructor // true
 
 **//b.constructor === B.prototype.constructor // true**
 
-**//CLASS可以看成是函数对象，constructor和其他方法一样，也是挂载在prototype上**
+**//CLASS B后就存在了B.prototype，也就是B原型  constructor和其他方法一样，也是挂载在prototype上**
 
 上面代码中，`b`是`B`类的实例，它的`constructor()`方法就是`B`类原型的`constructor()`方法。
 
@@ -175,7 +175,7 @@ Object.getOwnPropertyNames(Point.prototype)
 
 ### constructor 方法
 
-`constructor()`方法是类的默认方法，通过`new`命令生成对象实例时，自动调用该方法。一个类必须有`constructor()`方法，如果没有显式定义，一个空的`constructor()`方法会被默认添加。
+`constructor()`方法是类的默认方法，**通过`new`命令生成对象实例时，自动调用该方法** 。一个类必须有`constructor()`方法，如果没有显式定义，一个空的`constructor()`方法会被默认添加。
 
 ```javascript
 class Point {
@@ -233,7 +233,7 @@ var point = Point(2, 3);
 var point = new Point(2, 3);
 ```
 
-与 ES5 一样，实例的属性除非显式定义在其本身（即定义在`this`对象上），否则都是定义在原型上（即定义在`class`上）。
+与 ES5 一样，**实例的属性除非显式定义在其本身（即定义在`this`对象上），否则都是定义在原型上（即定义在`class`上）**。
 
 ```javascript
 //定义类
@@ -295,7 +295,7 @@ p3.printName() // "Oops"
 
 ### 取值函数（getter）和存值函数（setter）
 
-与 ES5 一样，在“类”的内部可以使用`get`和`set`关键字，对某个属性设置存值函数和取值函数，拦截该属性的存取行为。
+**与 ES5 一样，在“类”的内部可以使用`get`和`set`关键字，对某个属性设置存值函数和取值函数，拦截该属性的存取行为**。
 
 ```javascript
 class MyClass {
