@@ -53,8 +53,8 @@ typeof Point // "function"
 Point === Point.prototype.constructor // true
 ```
 
-**Point === Point.prototype.constructor // true**
-** Class的constructor和其他方法一样，也在prototype **
+**//Point === Point.prototype.constructor // true**
+**//Class的constructor和其他方法一样，也在prototype **
 
 上面代码表明，类的数据类型就是函数，类本身就指向构造函数。
 
