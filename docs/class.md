@@ -53,6 +53,8 @@ typeof Point // "function"
 Point === Point.prototype.constructor // true
 ```
 
+**Point === Point.prototype.constructor // true**
+
 上面代码表明，类的数据类型就是函数，类本身就指向构造函数。
 
 使用的时候，也是直接对类使用`new`命令，跟构造函数的用法完全一致。
