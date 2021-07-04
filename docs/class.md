@@ -110,9 +110,11 @@ b.constructor === B.prototype.constructor // true
 
 **b.constructor === B.prototype.constructor // true**
 
+**CLASS可以看成是函数对象，constructor和其他方法一样，也是挂载在prototype上**
+
 上面代码中，`b`是`B`类的实例，它的`constructor()`方法就是`B`类原型的`constructor()`方法。
 
-由于类的方法都定义在`prototype`对象上面，所以类的新方法可以添加在`prototype`对象上面。`Object.assign()`方法可以很方便地一次向类添加多个方法。
+**由于类的方法都定义在`prototype`对象上面，所以类的新方法可以添加在`prototype`对象上面。`Object.assign()`方法可以很方便地一次向类添加多个方法。**
 
 ```javascript
 class Point {
